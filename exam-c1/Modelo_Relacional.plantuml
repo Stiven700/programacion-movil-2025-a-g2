@@ -1,0 +1,86 @@
+@startuml MR
+left to right direction
+class Pasajero {
+    +ID_Pasajero: int <<PK>>
+    +Nombre: string
+    +Correo: string
+    +Telefono: string
+    +Documento: string
+}
+
+class Vuelo {
+    +ID_Vuelo: int <<PK>>
+    +ID_Aeronave: int <<FK>>
+    +Origen: string
+    +Destino: string
+    +Hora_Salida: datetime
+    +Hora_Llegada: datetime
+    +Estado: string
+}
+
+class Reserva {
+    +ID_Reserva: int <<PK>>
+    +ID_Pasajero: int <<FK>>
+    +ID_Vuelo: int <<FK>>
+    +Fecha_Reserva: datetime
+    +Estado: string
+}
+
+class Asiento {
+    +ID_Asiento: int <<PK>>
+    +ID_Vuelo: int <<FK>>
+    +ID_Pasajero: int <<FK>>
+    +Numero_Asiento: string
+}
+
+class Tripulacion {
+    +ID_Tripulante: int <<PK>>
+    +Nombre: string
+    +Correo: string
+    +Telefono: string
+    +ID_Rol: int <<FK>>
+}
+
+class RolTripulacion {
+    +ID_Rol: int <<PK>>
+    +Nombre_Rol: string
+}
+
+class Aeronave {
+    +ID_Aeronave: int <<PK>>
+    +Modelo: string
+    +Capacidad: int
+}
+
+class PuertaEmbarque {
+    +ID_Puerta: int <<PK>>
+    +Numero_Puerta: string
+    +Ubicacion: string
+}
+
+class Notificacion {
+    +ID_Notificacion: int <<PK>>
+    +ID_Pasajero: int <<FK>>
+    +ID_Vuelo: int <<FK>>
+    +Mensaje: string
+    +Fecha_Hora: datetime
+}
+
+class ServicioAeropuerto {
+    +ID_Servicio: int <<PK>>
+    +Nombre: string
+    +Descripcion: string
+}
+
+Pasajero ||--o{ Reserva: "hace"
+Vuelo ||--o{ Reserva: "tiene"
+Vuelo ||--o{ Asiento: "asigna"
+Pasajero ||--o{ Asiento: "ocupa"
+Tripulacion ||--o{ RolTripulacion: "pertenece"
+Vuelo ||--o{ Tripulacion: "opera"
+Vuelo ||--|| Aeronave: "usa"
+Vuelo ||--|| PuertaEmbarque: "asignado_a"
+Pasajero ||--o{ Notificacion: "recibe"
+ServicioAeropuerto ||--o{ Vuelo: "disponible_para"
+
+@enduml
