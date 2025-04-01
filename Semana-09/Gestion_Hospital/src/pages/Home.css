@@ -1,0 +1,51 @@
+/* Estilo para el título principal */
+.home-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 30px;
+  }
+  
+  /* Contenedor de las tarjetas */
+  .home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Asegura que se acomoden bien en pantallas pequeñas */
+    padding: 0 10px;
+  }
+  
+  /* Estilo para cada tarjeta */
+  .home-card {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .home-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .home-card h3 {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-top: 10px;
+  }
+  
+  /* Mejorar la responsividad */
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .home-card {
+      width: 90%;
+    }
+  }
+  

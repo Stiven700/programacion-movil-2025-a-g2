@@ -1,0 +1,118 @@
+    /* MedicoPage.css */
+
+    /* Estilo global para la página */
+    .ion-page {
+        background-color: #f4f4f9;
+        padding: 20px;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    /* Estilo para la Card de contenido */
+    ion-card {
+        background-color: white;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* Títulos de las páginas */
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #1e3d58;
+    }
+    
+    /* Estilo para los campos de texto (IonInput) */
+    ion-item {
+        margin-bottom: 15px;
+    }
+    
+    /* Estilo para el botón de agregar/modificar */
+    ion-button {
+        margin-top: 20px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        text-transform: uppercase;
+        padding: 12px 20px;
+    }
+    
+    /* Estilo para la tabla de médicos (IonGrid) */
+    ion-grid {
+        margin-top: 30px;
+    }
+    
+    ion-row {
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    
+    ion-col {
+        text-align: center;
+        padding: 5px;
+    }
+    
+    ion-row:nth-child(even) {
+        background-color: #e9e9e9;
+    }
+    
+    ion-row:hover {
+        background-color: #d1e0e0;
+    }
+    
+    ion-button {
+        font-size: 14px;
+        margin: 0 5px;
+        border-radius: 6px;
+    }
+    
+    /* Estilo de botones de acción en la tabla */
+    ion-button.modify {
+        background-color: #ff9800;
+        color: white;
+    }
+    
+    ion-button.delete {
+        background-color: #f44336;
+        color: white;
+    }
+    
+    ion-button.modify:hover,
+    ion-button.delete:hover {
+        opacity: 0.8;
+    }
+    
+    /* Asegurarse que los inputs no se sobrepongan */
+    ion-input {
+        width: 100%;
+    }
+    
+    /* Estilo adicional para la tabla */
+    ion-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    ion-col {
+        flex: 1;
+    }
+    
+    ion-item label {
+        color: #333;
+    }
+    
+    ion-item {
+        margin-bottom: 10px;
+    }
+    
+    /* Asegurarse de que todo esté alineado y con márgenes adecuados */
+    .ion-item .input-wrapper {
+        margin-bottom: 5px;
+    }
+    
